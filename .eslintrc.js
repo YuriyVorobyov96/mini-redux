@@ -181,5 +181,6 @@ module.exports = {
     'operator-linebreak': 'off',
     'brace-style': 'off',
     'import/prefer-default-export': 'off',
+    'default-param-last': 'off',
   },
 };
