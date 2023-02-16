@@ -13,7 +13,7 @@ export class Store {
     this.reducer = reducer;
 
     if (middleware) {
-      middleware(Store)(reducer);
+      middleware(this.create)(reducer);
     }
   }
 
@@ -29,5 +29,9 @@ export class Store {
 
   public getState(): unknown {
     return this.state;
+  }
+
+  private create(reducer): Store {
+    return new Store(reducer);
   }
 }
