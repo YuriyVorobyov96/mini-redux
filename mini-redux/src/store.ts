@@ -17,7 +17,7 @@ export class Store {
     this.listeners.push(callback);
   };
 
-  public dispatch(action): void {
+  public dispatch(action: unknown): void {
     this.state = this.reducer(this.state, action);
 
     this.listeners.forEach(listener => listener());
