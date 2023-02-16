@@ -23,7 +23,7 @@ export class Store {
     this.listeners.forEach(listener => listener());
   };
 
-  public getState() {
+  public getState(): unknown {
     return this.state;
   };
 }
